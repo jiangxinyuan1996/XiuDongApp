@@ -64,6 +64,8 @@
 <script>
 import axios from 'axios'
 import mmenu from '@/components/menu'
+import { Indicator } from 'mint-ui'
+
 export default {
   components: {
     mmenu
@@ -83,12 +85,18 @@ export default {
 
   },
   mounted () {
+    Indicator.open({
+      text: '加载中...',
+      spinnerType: 'fading-circle'
+    })
     axios
       .post(
         '/api/wap/raise/detail.json',
         `raiseId=${this.$route.params.id}&st_flpv=1576809246743lc4Rm4MG296HhsPTPatz&sign=&trackPath=&terminal=wap`
       )
       .then(res => {
+        Indicator.close()
+
         this.datalist = res.data.result.raiseVo
         // console.log(res.data.result.raiseVo.introduce)
       })
