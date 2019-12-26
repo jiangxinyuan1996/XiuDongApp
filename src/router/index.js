@@ -9,8 +9,8 @@ import List from '@/views/detail/list'
 import Search from '@/views/detail/search'
 
 import Goods from '@/views/Goods'
-import Goodstheme from '@/views/Good/goodstheme'
-import GoodsDetail from '@/views/Good/detail'
+import Goodstheme from '@/views/good/goodstheme'
+import GoodsDetail from '@/views/good/detail'
 
 import Login from '@/views/login/login'
 

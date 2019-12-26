@@ -7,6 +7,18 @@
         <button class="btn">立即登陆</button>
     </div>
 </template>
+<script>
+export default {
+  beforeMount () {
+    //   this.$store.state.isShow=false
+    this.$store.commit('hide')
+  },
+  beforeDestroy () {
+    //   this.$store.state.isShow=true
+    this.$store.commit('show')
+  }
+}
+</script>
 <style lang="scss" scoped>
 div{
     text-align: center
@@ -14,7 +26,7 @@ div{
     .logo{
         width: 100%;
         height: 0.87rem;
-        padding:33px 0rem 33px 0rem;
+        padding:0.33rem 0rem 0.33rem 0rem;
     }
     img{
         width: 0.75rem;

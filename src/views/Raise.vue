@@ -41,6 +41,8 @@
 </template>
 <script>
 import axios from 'axios'
+import { Indicator } from 'mint-ui'
+
 // import { InfiniteScroll } from 'mint-ui'
 
 export default {
@@ -50,6 +52,12 @@ export default {
       loading: false,
       current: 1
     }
+  },
+  mounted () {
+    Indicator.open({
+      text: '加载中...',
+      spinnerType: 'fading-circle'
+    })
   },
   methods: {
     loadMore () {
@@ -77,9 +85,9 @@ export default {
         url:
           'https://wap.showstart.com/api/wap/raise/list.json?pageNo=1&st_flpv=1576809246743lc4Rm4MG296HhsPTPatz&sign=&trackPath=&terminal=wap'
       }).then(res => {
-        // console.log(res.data.result)
+        Indicator.close()
+
         this.datalist = res.data.result
-        //   console.log(this.width)
       })
     }
   },

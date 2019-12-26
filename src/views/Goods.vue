@@ -35,7 +35,7 @@
 <script>
 import axios from 'axios'
 // import {} from 'mint-ui'
-import aroundGoodslist from './Good/components/goodslist'
+import aroundGoodslist from './good/components/goodslist'
 export default {
   components: {
     aroundGoodslist
