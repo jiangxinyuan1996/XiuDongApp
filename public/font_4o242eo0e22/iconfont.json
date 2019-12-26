@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1037692",
+      "name": "向右",
+      "font_class": "xiangyou",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    }
+  ]
+}
