@@ -25,7 +25,7 @@ import Coupon from '@/views/login/coupon'
 import twoDetail from '@/views/detail/detail'
 
 import Perform from '@/views/detail/Perform'
-import Activity from '@/views/detail/Activity'
+import Activity from '@/views/detail/active'
 
 import Brand from '@/views/site/brand'
 import Site from '@/views/site/site'
