@@ -23,6 +23,9 @@ export default {
 ul,li{
   list-style: none;
 }
+ .previewVideo{
+    width: 100%;
+  }
 .footer{
   .introduce{
     img{

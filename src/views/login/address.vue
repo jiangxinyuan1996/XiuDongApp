@@ -11,6 +11,12 @@
 <script>
 import mmenu from '@/components/menu'
 export default {
+beforeDestroy(){
+    this.$store.commit('show')
+  },
+  mounted () {
+    this.$store.commit('hide')
+  },
   components: {
     mmenu
   }
