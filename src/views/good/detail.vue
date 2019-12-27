@@ -32,17 +32,14 @@ export default {
       detailList: []
     }
   },
-  beforeMount () {
-    //   this.$store.state.isShow=false
-    this.$store.commit('hide')
-  },
+
   beforeDestroy () {
     //   this.$store.state.isShow=true
     this.$store.commit('show')
   },
   methods: {
     handleclick () {
-      this.$router.push(`/Goods`)
+      this.$router.push(`/goods`)
     },
     suppertclick () {
       this.$router.push(`/center`)
@@ -50,6 +47,8 @@ export default {
 
   },
   mounted () {
+    this.$store.commit('hide')
+
     axios
       .post(
         'https://wap.showstart.com/api/wap/goods/detail.json',
