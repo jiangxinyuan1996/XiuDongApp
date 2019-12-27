@@ -16,6 +16,16 @@
       <div class="down_right">立即购买</div>
     </div>
   <navMenu></navMenu>
+    <div class="down">
+      <div class="down_left" @click="handleclick">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAABRCAMAAACdUboEAAAAclBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACa4vOeAAAAJXRSTlMAgHTAHvMFnUcJ4JW6XczIs6URi+bVFdquhXtPOy1oQibsxDVWLP9qxwAAAglJREFUWMPtmNtygjAQhiFIKueDoBwUtbrv/4pNKJ2tphMW15vO8F2RFf4h+ZfdRGdl5d9xbIu4aI9v00tC+CZM3qJXxoDEJV9wn8Jv0j1XUE6CYRZOkpKp2I4yzUldnprxuuUJbkYRMY3EONqwFCMtET0PGUhfKfh7tGkcS05mg6JzkE4HOJnujuv2vK4uQ/FDPV89RCoV+WAo5joBHyI6PXOGoqee92wROpdEuIpQfy0ugpFuuC2xPKmBQNUFRL0gByL1habYAJkDqbjtYAEeYTFPoInPpd3r4BaBZqAlNUSU7LmP855XrPRtkpSPBaG24YdLUTyDYraZbUGx/RnFekmnazMSgGI3pygeZiKwgP8VqfGF7cb4WHFFLiT+iBFcyOucYqZuyhwigmKNT6x/aE1PsFqQdweYGASrSYRYfwkrQ63xIdVqemcr+VYjvVY8M6y2Gcm3Gt+gYFptNsuaa7VZ8AO+1UiiFW+WGz4Nqyk9ZGBabW4HI67Vxj4oY1ttrjzfamQAxYVptbkLTt5mNXYvvtXIAZsj32rsXgyrrW7yrcbX6JlWm92rs1idGlHK1quhWc3vXiVavfi8bEkeTH9mP8T0f+3AbNveBgsFg6vZaljncVmMM7MeE7xtSX/B3rP/0RDBcuyLL7OXBGNpmUXzgmBhN/NeL9RLe9LRmopINs7KygqPLwiLhGvwWobHAAAAAElFTkSuQmCC"
+          alt
+        />
+        周边
+      </div>
+      <div class="down_right" @click="suppertclick" >立即购买</div>
+    </div>
   </div>
 </template>
 
@@ -37,8 +47,19 @@ export default {
       detailList: []
     }
   },
-  beforeDestroy(){
+
+
+  beforeDestroy () {
     this.$store.commit('show')
+  },
+  methods: {
+    handleclick () {
+      this.$router.push(`/goods`)
+    },
+    suppertclick () {
+      this.$router.push(`/center`)
+    }
+
   },
   mounted () {
     this.$store.commit('hide')
