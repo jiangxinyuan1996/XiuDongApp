@@ -9,7 +9,7 @@
 <script>
 import mmenu from '@/components/menu'
 export default {
-  beforeDestroy(){
+  beforeDestroy () {
     this.$store.commit('show')
   },
   mounted () {
